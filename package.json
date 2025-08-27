@@ -1,0 +1,48 @@
+{
+  "name": "medusajs-tools",
+  "displayName": "Medusa.js Tools",
+  "description": "Tools and snippets for development with Medusa.js",
+  "version": "1.0.0",
+  "publisher": "@perseidesjs",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Snippets",
+    "Commands",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:medusa-snippets.createModule"
+  ],
+  "main": "./extension.js",
+  "keywords": [
+    "medusa",
+    "medusajs",
+    "ecommerce",
+    "api",
+    "routes",
+    "snippets",
+    "typescript"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "medusa-snippets.createModule",
+        "title": "Create Medusa Module",
+        "category": "Medusa.js"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/medusa.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/perseidesjs/medusajs-vscode-tools"
+  },
+  "license": "MIT"
+}
