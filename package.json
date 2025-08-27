@@ -3,7 +3,7 @@
   "displayName": "Medusa.js Tools",
   "description": "Tools and snippets for development with Medusa.js",
   "version": "1.0.0",
-  "publisher": "@perseidesjs",
+  "publisher": "adevinwild",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -44,5 +44,6 @@
     "type": "git",
     "url": "https://github.com/perseidesjs/medusajs-vscode-tools"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "icon": "./icon.png"
 }
