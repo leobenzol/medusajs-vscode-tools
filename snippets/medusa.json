@@ -1,0 +1,121 @@
+{
+	"Medusa - Route GET": {
+		"prefix": "mrg",
+		"description": "Creates a new GET API route for Medusa.js",
+		"body": [
+			"import type {",
+			"  MedusaRequest,",
+			"  MedusaResponse,",
+			"} from \"@medusajs/framework/http\"",
+			"",
+			"export const GET = (",
+			"  req: MedusaRequest,",
+			"  res: MedusaResponse",
+			") => {",
+			"  $1",
+			"  res.json({",
+			"    message: \"[GET] Hello world!\",",
+			"  })",
+			"}"
+		]
+	},
+	"Medusa - Route POST": {
+		"prefix": "mrp",
+		"description": "Creates a new POST API route for Medusa.js",
+		"body": [
+			"import type {",
+			"  MedusaRequest,",
+			"  MedusaResponse,",
+			"} from \"@medusajs/framework/http\"",
+			"",
+			"export const POST = async (",
+			"  req: MedusaRequest,",
+			"  res: MedusaResponse",
+			") => {",
+			"  // Add your POST logic here",
+			"  $1",
+			"  res.status(201).json({",
+			"    message: \"[POST] Hello world!\",",
+			"  })",
+			"}"
+		]
+	},
+	"Medusa - Route PUT": {
+		"prefix": "mru",
+		"description": "Creates a new PATCH/PUT API route for Medusa.js",
+		"body": [
+			"import type {",
+			"  MedusaRequest,",
+			"  MedusaResponse,",
+			"} from \"@medusajs/framework/http\"",
+			"",
+			"export const PUT = async (",
+			"  req: MedusaRequest,",
+			"  res: MedusaResponse",
+			") => {",
+			"  // Add your PUT logic here",
+			"  $1",
+			"  res.json({",
+			"    message: \"[PUT] Hello world!\",",
+			"  })",
+			"}"
+		]
+	},
+	"Medusa - Route DELETE": {
+		"prefix": "mrd",
+		"description": "Creates a new DELETE API route for Medusa.js",
+		"body": [
+			"import type {",
+			"  MedusaRequest,",
+			"  MedusaResponse,",
+			"} from \"@medusajs/framework/http\"",
+			"",
+			"export const DELETE = async (",
+			"  req: MedusaRequest,",
+			"  res: MedusaResponse",
+			") => {",
+			"  // Add your DELETE logic here",
+			"  $1",
+			"  res.status(204).send()",
+			"}"
+		]
+	},
+	"Medusa - Workflow": {
+		"prefix": "mrw",
+		"description": "Creates a new Medusa.js workflow",
+		"body": [
+			"import {",
+			"  createWorkflow,",
+			"  WorkflowResponse,",
+			"} from \"@medusajs/framework/workflows-sdk\"",
+			"",
+			"type WorkflowInput = {}",
+			"",
+			"const myWorkflow = createWorkflow(",
+			"  \"${1:workflow-name}\",",
+			"  function (input: WorkflowInput) {",
+			"    // Use your steps here",
+			"    $2",
+			"    return new WorkflowResponse(\"Done!\")",
+			"  }",
+			")",
+			"",
+			"export default myWorkflow"
+		]
+	},
+	"Medusa - Workflow Step": {
+		"prefix": "mrws",
+		"description": "Creates a new Medusa.js workflow step",
+		"body": [
+			"import { createStep, StepResponse } from \"@medusajs/framework/workflows-sdk\"",
+			"",
+			"const ${1:stepName} = createStep(",
+			"  \"${2:step-id}\",",
+			"  async () => {",
+			"    $3",
+			"    return new StepResponse(`Hello from ${2:step-id}!`)",
+			"  }",
+			")"
+		]
+	}
+}

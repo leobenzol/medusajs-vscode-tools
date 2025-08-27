@@ -1,70 +1,47 @@
-# Medusa.js Snippets
+<p align="center">
+  <a href="https://www.github.com/perseidesjs">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./.github/assets/dark_mode.png" width="128" height="128">
+    <source media="(prefers-color-scheme: light)" srcset="./.github/assets/light_mode.png" width="128" height="128">
+    <img alt="Perseides logo" src="./.github/assets/light_mode.png">
+    </picture>
+  </a>
+</p>
+<h1 align="center">
+    Medusa.js VSCode Tools
+</h1>
 
-A Visual Studio Code extension that provides useful code snippets and commands for Medusa.js development.
+<h4 align="center">
+  <a href="https://perseides.org">Website</a> |
+  <a href="https://www.medusajs.com">Medusa</a>
+</h4>
 
-## Features
+<p align="center">
+ Visual Studio Code extension providing code snippets and commands for Medusa.js development.
+</p>
 
-### Code Snippets
-This extension provides the following snippets for Medusa.js development:
 
-- `mrg` - Creates a GET API route
-- `mrp` - Creates a POST API route  
-- `mru` - Creates a PUT API route
-- `mrd` - Creates a DELETE API route
-- `mrw` - Creates a workflow
-- `mrws` - Creates a workflow step
+### Snippets
 
+- `mrg` - GET API route handler
+- `mrp` - POST API route handler
+- `mru` - PUT API route handler
+- `mrd` - DELETE API route handler
+- `mrw` - Workflow creation
+- `mrws` - Workflow step creation
 
 ### Commands
-- **Create Medusa Module**: Automatically generates a complete module structure with boilerplate files
+
+- **Create Medusa Module** - Generates complete module structure with interactive prompts for models and automatic configuration updates
 
 ## Usage
 
-### Using Snippets
-1. Open a TypeScript or JavaScript file
-2. Type one of the snippet prefixes (e.g., `mrg`)
-3. Press `Tab` or `Enter` to expand the snippet
-4. Use `Tab` to navigate through the snippet placeholders
+### Snippets
+Type snippet prefix and press Tab to expand.
 
-### Using Commands
-1. Open the Command Palette (`Cmd+Shift+P` on Mac, `Ctrl+Shift+P` on Windows/Linux)
-2. Type "Create Medusa Module"
-3. Enter the name of your module (e.g., "user-management")
-4. The extension will create the complete module structure in `src/modules/`
-
-#### Module Structure Created
-When you run the "Create Medusa Module" command, it generates:
-```
-src/modules/your-module-name/
-├── index.ts          # Module definition and exports
-├── service.ts        # Service class with CRUD methods
-└── models/
-    └── your-module-name.ts  # Model definition
-```
-
-## Snippets
-
-### GET Route (`mrg`)
-Creates a basic GET API route handler with proper Medusa.js imports and types.
-
-### POST Route (`mrp`)
-Creates a basic POST API route handler with async/await pattern.
-
-### PUT Route (`mru`)
-Creates a basic PUT API route handler for updating resources.
-
-### DELETE Route (`mrd`)
-Creates a basic DELETE API route handler that returns a 204 status.
-
-## Requirements
-
-- Visual Studio Code 1.74.0 or higher
-- Medusa.js project
-
-## Contributing
-
-If you have suggestions for improvements or additional snippets, please feel free to contribute!
+### Commands
+Use Command Palette to access "Create Medusa Module" command.
 
 ## License
 
-MIT
+MIT License - Feel free to contribute
