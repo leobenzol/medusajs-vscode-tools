@@ -11,6 +11,9 @@ This extension provides the following snippets for Medusa.js development:
 - `mrp` - Creates a POST API route  
 - `mru` - Creates a PUT API route
 - `mrd` - Creates a DELETE API route
+- `mrw` - Creates a workflow
+- `mrws` - Creates a workflow step
+
 
 ### Commands
 - **Create Medusa Module**: Automatically generates a complete module structure with boilerplate files
