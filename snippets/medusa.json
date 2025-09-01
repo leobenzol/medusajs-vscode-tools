@@ -117,5 +117,20 @@
 			"  }",
 			")"
 		]
+	},
+	"Medusa - Middleware Route": {
+		"prefix": "mrm",
+		"description": "Creates a new Medusa.js middleware route configuration",
+		"body": [
+			"import { MiddlewareRoute } from \"@medusajs/framework\"",
+			"",
+			"export const ${1:middlewareName}: MiddlewareRoute[] = [",
+			"    {",
+			"        method: [\"${2:GET}\"],",
+			"        matcher: \"${3:/store/custom/*}\",",
+			"        middlewares: [\"${4:authenticate}\"]",
+			"    }",
+			"]"
+		]
 	}
 }

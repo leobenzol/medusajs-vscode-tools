@@ -29,6 +29,7 @@
 - `mrd` - DELETE API route handler
 - `mrw` - Workflow creation
 - `mrws` - Workflow step creation
+- `mrm` - Middleware group route configuration
 
 ### Commands
 
