@@ -23,13 +23,16 @@
 
 ### Snippets
 
+#### API Routes (mr -> Medusa Route)
 - `mrg` - GET API route handler
 - `mrp` - POST API route handler
 - `mru` - PUT API route handler
 - `mrd` - DELETE API route handler
-- `mrw` - Workflow creation
-- `mrws` - Workflow step creation
 - `mrm` - Middleware group route configuration
+
+#### Workflows (mw -> Medusa Workflow)
+- `mw` - Workflow creation
+- `mws` - Workflow step creation
 
 ### Commands
 
