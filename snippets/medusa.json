@@ -132,5 +132,18 @@
 			"    }",
 			"]"
 		]
+	},
+	"Medusa - Route Validator": {
+		"prefix": "mrv",
+		"description": "Creates a new Medusa.js route validator",
+		"body": [
+			"import { z } from \"zod\";",
+			"",
+			"export const ${1:ValidatorName} = z.object({",
+			"  $2",
+			"})",
+			"",
+			"export type ${1:ValidatorName}Type = z.infer<typeof ${1:ValidatorName}>"
+		]
 	}
 }

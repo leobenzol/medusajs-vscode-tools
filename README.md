@@ -29,6 +29,7 @@
 - `mru` - PUT API route handler
 - `mrd` - DELETE API route handler
 - `mrm` - Middleware group route configuration
+- `mrv` - Create zod schema for route validation
 
 #### Workflows (mw -> Medusa Workflow)
 - `mw` - Workflow creation
