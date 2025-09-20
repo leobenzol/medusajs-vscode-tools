@@ -225,10 +225,18 @@ ${moduleEntry}
 })
 `;
   } else {
-    // Add modules array to existing config
-    // Look for the closing brace of the defineConfig object
     const configEndPattern = /(\s*)(}\s*\)\s*;?\s*$)/;
-    return configContent.replace(configEndPattern, `$1${moduleEntry}$1$2`);
+    return configContent.replace(configEndPattern, (match, whitespace, closing) => {
+      // Check if there's already a comma before the closing brace
+      const beforeClosing = configContent.substring(0, configContent.lastIndexOf(closing));
+      const lastNonWhitespace = beforeClosing.trim().slice(-1);
+
+      // If the last non-whitespace character is not a comma, add one
+      const commaNeeded = lastNonWhitespace !== ',' && lastNonWhitespace !== '{';
+      const comma = commaNeeded ? ',' : '';
+
+      return `${comma}${whitespace}${moduleEntry}${whitespace}${closing}`;
+    });
   }
 }
 
