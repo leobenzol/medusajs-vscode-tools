@@ -147,5 +147,26 @@
 			"",
 			"export type ${1:ValidatorName}Type = z.infer<typeof ${1:ValidatorName}>"
 		]
+	},
+	"Medusa - Subscriber": {
+		"prefix": "mss",
+		"description": "Creates a new Medusa.js workflow step",
+		"body": [
+			"import {",
+			"    type SubscriberConfig,",
+			"    type SubscriberArgs,",
+			"} from \"@medusajs/medusa\"",
+			"",
+			"export default async function ${2:${1/^(.)|[\\.\\-]+(.)/${1:/downcase}${2:/upcase}/g}Handler}({",
+			"    event: { data },",
+			"    container,",
+			"}: SubscriberArgs<{ ${3:id: string} }>) {",
+			"    $0",
+			"}",
+			"",
+			"export const config: SubscriberConfig = {",
+			"    event: \"${1:product.created}\",",
+			"}",
+		]
 	}
 }
