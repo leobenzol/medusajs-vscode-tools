@@ -109,12 +109,14 @@
 		"body": [
 			"import { createStep, StepResponse } from \"@medusajs/framework/workflows-sdk\"",
 			"",
-			"const ${1:stepName} = createStep(",
-			"  \"${2:step-id}\",",
-			"  async () => {",
-			"    $3",
-			"    return new StepResponse(`Hello from ${2:step-id}!`)",
-			"  }",
+			"type StepInput = {}",
+			"",
+			"export const ${1:stepName} = createStep(",
+			"    \"${2:unique-step-id}\",",
+			"    async (input: StepInput, { container }) => {",
+			"        $3",
+			"        return new StepResponse('Step completed!')",
+			"    }",
 			")"
 		]
 	},
