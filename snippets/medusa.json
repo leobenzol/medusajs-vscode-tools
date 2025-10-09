@@ -150,17 +150,16 @@
 	},
 	"Medusa - Subscriber": {
 		"prefix": "mss",
-		"description": "Creates a new Medusa.js workflow step",
+		"description": "Creates a new Medusa.js subscriber",
 		"body": [
-			"import {",
-			"    type SubscriberConfig,",
-			"    type SubscriberArgs,",
-			"} from \"@medusajs/medusa\"",
+			"import type { SubscriberConfig, SubscriberArgs } from \"@medusajs/medusa\"",
 			"",
-			"export default async function ${2:${1/^(.)|[\\.\\-]+(.)/${1:/downcase}${2:/upcase}/g}Handler}({",
+			"type EventData = { ${3:id: string} }",
+			"",
+			"export default async function ${2:${1/^(.)|[\\.\\-]+(.)/${1:/downcase}${2:/upcase}/g}}Handler({",
 			"    event: { data },",
 			"    container,",
-			"}: SubscriberArgs<{ ${3:id: string} }>) {",
+			"}: SubscriberArgs<EventData>) {",
 			"    $0",
 			"}",
 			"",
@@ -168,5 +167,5 @@
 			"    event: \"${1:product.created}\",",
 			"}",
 		]
-	}
+	},
 }
